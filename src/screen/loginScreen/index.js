@@ -79,7 +79,7 @@ export default class loginScreen extends React.Component{
             </View>
             <Text style={{color:"red"}}>{this.state.passwordError}</Text>
         
-             <View style={styles.rememberContainer}>
+             <TouchableOpacity style={styles.rememberContainer}>
           <Icons style={styles.icon2}
               name={this.state.hideRemember ? 'checksquare' : 'checksquareo'}
               size={25}
@@ -87,7 +87,7 @@ export default class loginScreen extends React.Component{
               onPress={() => this.setState({hideRemember:!this.state.hideRemember})}
             />
             <Text  style={{fontWeight:'bold' ,color: "red",fontSize:18 }}> REMEMBER ME</Text>
-            </View>
+            </TouchableOpacity>
           <TouchableOpacity 
           style={styles.buttonContainer}
           onPress={() => navigation.navigate('Detail',{'data':this.state})}>
@@ -95,18 +95,15 @@ export default class loginScreen extends React.Component{
           </TouchableOpacity>
           <Text  style={styles.forgotContainer}> FORGOT YOUR PASSWORD ?</Text>
           <View style = {styles.lineStyle} />
-          <View style={styles.passwordContainer}>
-          <TextInput
-            style={styles.inputStyle,{alignItems:"center",textAlign:"center"}}
-            
-            />
-            <Image source={logo.cap} name="graduation-cap" size={50} style={{alignItems:'flex-start',width: 40,
-      height: 30,
-      resizeMode: 'contain'}}/>
-            <Text style={{fontWeight:'bold',color:'red',paddingLeft:40}}>LOGIN USING UNIVERSITY ID </Text>
-            <Cap  name='chevron-thin-down' size={20} style={{paddingLeft:50,color:"red"}}/>
+          <TouchableOpacity style={styles.universityContainer}>
+          <View style={styles.viewContainerUniversity}>
+          <Image source={logo.cap}  style={styles.imageContainerUniversity}/>
+
+            <Text style={{fontWeight:'bold',color:'red',paddingLeft:20,fontSize:20}}>LOGIN USING UNIVERSITY ID </Text>
          </View>
+         <Cap  name='chevron-thin-down' size={20} color="red"/>
        
+         </TouchableOpacity>
         </View>
       );
     }}

@@ -71,6 +71,26 @@ export default StyleSheet.create({
    alignItems:'center',
    justifyContent:'center',
    paddingRight:15
+ },
+ universityContainer:{
+  flexDirection:"row",
+  justifyContent:'space-between',
+  marginVertical:5,alignSelf:"center",
+  borderWidth:1,borderColor:"red",
+  padding:5,
+  width:"90%",
+  borderRadius:5
+ },
+ viewContainerUniversity:{
+  flexDirection:"row",
+  alignItems:"center",
+  width:"90%"
+
+ },
+ imageContainerUniversity:{
+  width: 25,
+  height: 25,
+  resizeMode: 'contain'
  }
   })
 
